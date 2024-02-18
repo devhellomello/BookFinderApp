@@ -32,17 +32,9 @@
 		<data>
 		M2mtSetckqzpiw+aNGGxXLskMkY=
 		</data>
-		<key>Resources/dotnet_bot.png</key>
+		<key>Resources/blankbook.png</key>
 		<data>
-		egvqYQJu98U5bepNqiiYGWJc9As=
-		</data>
-		<key>Resources/dotnet_bot@2x.png</key>
-		<data>
-		5Olnli4Cc1nAHZR7Qad9WEquVR0=
-		</data>
-		<key>Resources/dotnet_bot@3x.png</key>
-		<data>
-		Zt+VE+uuJQUze/d9zd3r+NdrtDw=
+		EWEXmsdAknsxQPc1CLIVR+4SQxg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,14 +43,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SQDOjUCl80Nck2fOKbyZc0gqoSCYaNvHYA/4F56jOE0=
+			CBUwutwhi4tRTkRwKkOeWxWUP5qKeARfMGlSRtgSUeI=
 			</data>
 		</dict>
 		<key>MonoBundle/BookFinder.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IAVVPy+RH3W9SAtt1hzHhC4zM2Pca2rx4fTGB/yfnQs=
+			QxdhRpRAOU6YjPgK9hy+X7u+ppx4qtJ0imrILF3lEAI=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -1664,25 +1656,11 @@
 			UjsL5MFD8ItYZgYvH3TYFEFOzOi/BaQh5xbu+rFYyxc=
 			</data>
 		</dict>
-		<key>Resources/dotnet_bot.png</key>
+		<key>Resources/blankbook.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FRD2xBX1wchOeHEX2Af77q7m8O7ECwhQ0qzPcfEGsTM=
-			</data>
-		</dict>
-		<key>Resources/dotnet_bot@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			A9+c5HONTmrGGxPzPiicd+2iwsPQSTUCIhuPtWauMa8=
-			</data>
-		</dict>
-		<key>Resources/dotnet_bot@3x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Up4t4C3+oRoTqJRc+zJSfhbhdg8R3zWbHkE+G9N4B9U=
+			lnRuPQH4DQOBhumIrpRxF45NWMqWsKQHHEOV4n3YcGk=
 			</data>
 		</dict>
 	</dict>

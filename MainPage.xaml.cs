@@ -1,50 +1,70 @@
-﻿using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Xaml;
-using System;
+﻿//using Microsoft.Maui.Controls;
+//using Microsoft.Maui.Controls.Xaml;
+//using System;
 
 namespace BookFinder
 {
 public partial class MainPage : ContentPage
 {
-	private BookHelper _bookHelper;
+	private BookApiHelper  _bookApiHelper = new BookApiHelper();
 
     public MainPage()
 	{
 		InitializeComponent();
-		_bookHelper = new BookHelper();
 	}
-    private async void ClickOnSearch(object sender, EventArgs e)
+    private async void SearchBtnClicked (object sender, EventArgs e)
 	{
-		var result = await _bookHelper.GetBooks(booksEntry.Text);
-		if(result.Successful)
+		ClearResults();
+
+		try
 		{
-			var books = result.Books;
-			if(string.IsNullOrEmpty(books.Thumbnail))
-			{
-				booksImage.Source = new UriImageSource() { Uri = new Uri(books.Thumbnail) };
-			}
+			var result = await _bookApiHelper.GetBookTitle(bookEntry.Text);
+            if (result == null || result.Count <= 0)
+                {
+                    await DisplayAlert("Error", "No book(s) found.", "Ok");
+                }
+                else
+                {
+                    DisplayFirstBook(result[0]);
+                }
 
-			else
-			{
-				booksImage.Source = new FileImageSource() { File = "blankbook.png" };
-			}
-
-			bookTitleLabel.Text = books.Title;
-			bookAuthorLabel.Text = books.Authors;
-			bookPublisher.Text = books.Publisher;
-			bookPublishedDate.Text = books.PublishedDate;
-			bookDescription.Text = books.Description;
-			
-					
-		}
-
-		else
+            }
+		catch (Exception)
 		{
-			await DisplayAlert("Error", result.Error, "Ok");
-			booksEntry.Text = string.Empty;
+			await DisplayAlert("Error", "No book(s) found.", "Ok");
 		}
-	}
+		finally
+		{	
+			bookEntry.Text = string.Empty;
+		}
+}
+ private void ClearResults()
+ {
+				bookImage.Source = null;
+				bookTitleLabel.Text = string.Empty;
+				bookAuthorLabel.Text = string.Empty;
+				bookPublisherLabel.Text = string.Empty;
+				bookPublishedDateLabel.Text = string.Empty;
+				bookDescriptionLabel.Text = string.Empty;
+				searchStack.IsVisible = true;
+				resultsStack.IsVisible = false;
+ }
+ private void DisplayFirstBook (Book book)
+ {
+				bookImage.Source = book.Thumbnail ?? "blankbook.png";
+				bookTitleLabel.Text = book.Title;
+				bookAuthorLabel.Text = string.Join(" , ",  book.Authors);
+				bookPublisherLabel.Text = book.Publisher;
+				bookPublishedDateLabel.Text = book.PublishedDate;
+				bookDescriptionLabel.Text = book.Description;
+				searchStack.IsVisible = false;
+				resultsStack.IsVisible = true;
+ }
+
+private void BookClearBtn_Clicked(object sender, EventArgs e)
+{
+	ClearResults();
+}
 }
 
 }
-

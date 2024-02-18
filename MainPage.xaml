@@ -3,36 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BookFinder.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Image
+    <StackLayout Spacing="10" Padding="10,0">
+
+        <StackLayout x:Name="resultsStack" IsVisible="false">
+
+            <Image 
                 x:Name="bookImage"
-                HeightRequest="185"
+                HeightRequest="200"
                 HorizontalOptions="Center" />
 
-            <HorizontalStackLayout
-                HorizontalOptions="Center"
-                Spacing="7">
-            <Label
-                x:Name="bookAuthor"/>
-            <Label 
-                Text="Author(s): "/> 
+            <HorizontalStackLayout>
+                <Label Text="Title: " />
+                <Label x:Name="bookTitleLabel" />
             </HorizontalStackLayout>
-        
-            <Entry 
-                x:Name="booksEntry"
-                Placeholder="Enter book name here."
-                HeightRequest="40"
-                BackgroundColor="white" />
 
-            <Button
-                x:Name="BookSearchBtn"
-                Text="Search Books" 
-                Clicked="ClickOnSearch"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
+            <HorizontalStackLayout>
+                <Label Text="Author(s): " />
+                <Label x:Name="bookAuthorLabel" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Publisher: " />
+                <Label x:Name="bookPublisherLabel" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Date of First Publication: " />
+                <Label x:Name="bookPublishedDateLabel" />
+            </HorizontalStackLayout>
+
+            <Label HorizontalOptions="Center" Text="Description" />
+            <Label x:Name="bookDescriptionLabel" />
+
+            <Button VerticalOptions="EndAndExpand"
+                    x:Name="bookClearBtn"
+                    Text="Clear"
+                    Clicked="BookClearBtn_Clicked"
+                    HorizontalOptions="Center" />
+
+        </StackLayout>
+
+        <StackLayout x:Name="searchStack">
+
+            <Label Text="Search" FontSize="Header" />
+            <Entry 
+                x:Name="bookEntry" 
+                HeightRequest="40"
+                BackgroundColor="White" />
+            <Button 
+                VerticalOptions="EndAndExpand"
+                x:Name="bookSearchBtn"
+                Text="Search"
+                Clicked="SearchBtnClicked"
+                HorizontalOptions="Center" />
+
+        </StackLayout>
+    </StackLayout>
 
 </ContentPage>
