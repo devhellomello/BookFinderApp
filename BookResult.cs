@@ -1,5 +1,4 @@
-using MauiApp1;
-
+using System;
 namespace BookFinder
 {
     public class BookResult

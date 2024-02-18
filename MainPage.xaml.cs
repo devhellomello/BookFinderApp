@@ -18,12 +18,30 @@ public partial class MainPage : ContentPage
 		var result = await _bookHelper.GetBooks(booksEntry.Text);
 		if(result.Successful)
 		{
-			//add code here
+			var books = result.Books;
+			if(string.IsNullOrEmpty(books.Thumbnail))
+			{
+				booksImage.Source = new UriImageSource() { Uri = new Uri(books.Thumbnail) };
+			}
+
+			else
+			{
+				booksImage.Source = new FileImageSource() { File = "blankbook.png" };
+			}
+
+			bookTitleLabel.Text = books.Title;
+			bookAuthorLabel.Text = books.Authors;
+			bookPublisher.Text = books.Publisher;
+			bookPublishedDate.Text = books.PublishedDate;
+			bookDescription.Text = books.Description;
+			
+					
 		}
 
 		else
 		{
 			await DisplayAlert("Error", result.Error, "Ok");
+			booksEntry.Text = string.Empty;
 		}
 	}
 }

@@ -1,30 +1,17 @@
-namespace MauiApp1;
+using System;
+namespace BookFinder;
 
-public class Books : ContentPage
+public class Books 
+{	
+	public string Title { get; set; }
+	public IList<string> Authors { get; set; }
+	public string Publisher { get; set; }
+	public string PublishedDate { get; set; }
+	public string Description { get; set; }
+}
+public class ImageLinks 
 {
-	public Books()
-	{
-		Content = new VerticalStackLayout
-		{
-			Children = {
-				new Label { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, Text = "Welcome to .NET MAUI!"
-				}
-			}
-		};
-	}
-}
-
-public class VolumeInfo {
- public string title { get; set; }
- public IList<string> authors { get; set; }
- public string publisher { get; set; }
- public string publishedDate { get; set; }
- public string description { get; set; }
-
-}
-public class ImageLinks {
- public string smallThumbnail { get; set; }
-
+ public string Thumbnail { get; set; }
 }
 
 
