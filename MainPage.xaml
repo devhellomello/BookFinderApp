@@ -49,7 +49,9 @@
             <Entry 
                 x:Name="bookEntry" 
                 HeightRequest="40"
-                BackgroundColor="White" />
+                BackgroundColor="White" 
+                TextColor="Black" 
+                Placeholder="Enter the book title here." />
             <Button 
                 VerticalOptions="EndAndExpand"
                 x:Name="bookSearchBtn"
