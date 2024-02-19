@@ -39,6 +39,7 @@
                     HorizontalOptions="Center" />
         </StackLayout>
 
+        <StackLayout x:Name="searchStack">
         <!-- Framed Search Area -->
         <Frame WidthRequest="500" Padding="10" CornerRadius="10" BorderColor="Gray" Margin="0,0,0,10">
             <StackLayout Spacing="10">
@@ -56,7 +57,7 @@
                         HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </Frame>
-
+    </StackLayout>
     </StackLayout>
 </ContentPage>
 
