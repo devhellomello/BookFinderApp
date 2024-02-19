@@ -5,61 +5,58 @@
 
     <StackLayout Spacing="10" Padding="10,0">
 
+        <!-- Results Stack Layout -->
         <StackLayout x:Name="resultsStack" IsVisible="false">
-
-            <Image 
-                x:Name="bookImage"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
+            
+            <Image x:Name="bookImage" HeightRequest="200" HorizontalOptions="Center" />
+            
             <HorizontalStackLayout>
                 <Label Text="Title: " />
                 <Label x:Name="bookTitleLabel" />
             </HorizontalStackLayout>
-
+            
             <HorizontalStackLayout>
                 <Label Text="Author(s): " />
                 <Label x:Name="bookAuthorLabel" />
             </HorizontalStackLayout>
-
+            
             <HorizontalStackLayout>
                 <Label Text="Publisher: " />
                 <Label x:Name="bookPublisherLabel" />
             </HorizontalStackLayout>
-
+            
             <HorizontalStackLayout>
                 <Label Text="Date of First Publication: " />
                 <Label x:Name="bookPublishedDateLabel" />
             </HorizontalStackLayout>
-
+            
             <Label HorizontalOptions="Center" Text="Description" />
             <Label x:Name="bookDescriptionLabel" />
-
             <Button VerticalOptions="EndAndExpand"
                     x:Name="bookClearBtn"
                     Text="Clear"
                     Clicked="BookClearBtn_Clicked"
                     HorizontalOptions="Center" />
-
         </StackLayout>
 
-        <StackLayout x:Name="searchStack">
+        <!-- Framed Search Area -->
+        <Frame WidthRequest="500" Padding="10" CornerRadius="10" BorderColor="Gray" Margin="0,0,0,10">
+            <StackLayout Spacing="10">
+                <Label Text="Search" FontSize="Header" HorizontalOptions="Center" />
+                <Entry x:Name="bookEntry" 
+                       HeightRequest="40"
+                       BackgroundColor="White" 
+                       TextColor="Black" 
+                       Placeholder="Enter the book title here."
+                       HorizontalOptions="FillAndExpand" />
+                <Button VerticalOptions="EndAndExpand"
+                        x:Name="bookSearchBtn"
+                        Text="Search"
+                        Clicked="SearchBtnClicked"
+                        HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </Frame>
 
-            <Label Text="Search" FontSize="Header" />
-            <Entry 
-                x:Name="bookEntry" 
-                HeightRequest="40"
-                BackgroundColor="White" 
-                TextColor="Black" 
-                Placeholder="Enter the book title here." />
-            <Button 
-                VerticalOptions="EndAndExpand"
-                x:Name="bookSearchBtn"
-                Text="Search"
-                Clicked="SearchBtnClicked"
-                HorizontalOptions="Center" />
-
-        </StackLayout>
     </StackLayout>
-
 </ContentPage>
+

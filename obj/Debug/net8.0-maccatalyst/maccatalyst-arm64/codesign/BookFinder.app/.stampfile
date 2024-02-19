@@ -1,1 +1,0 @@
--v --force --timestamp=none --sign - --entitlements /Users/mello/Developer/DotNet/BookFinder/BookFinder/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/mello/Developer/DotNet/BookFinder/BookFinder/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/BookFinder.app
