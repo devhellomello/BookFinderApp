@@ -7,29 +7,23 @@ using System.Threading.Tasks;
 namespace BookFinder
 {
     public class GoogleBooksApiResponse
-{
-    public List<GoogleBookItem> Items { get; set; }
-}
+    {
+        public List<GoogleBookItem> Items { get; set; }
+    }
 
-public class GoogleBookItem
-{
-    public VolumeInfo VolumeInfo { get; set; }
-}
-
-public class VolumeInfo
-{
-    public string Title { get; set; }
-    public List<string> Authors { get; set; }
-    public string Publisher { get; set; }
-    public string PublishedDate { get; set; }
-    public string Description { get; set; }
-    public ImageLinks ImageLinks { get; set; }
-}
-
-public class ImageLinks
-{
-    public string Thumbnail { get; set; }
-}
+    public class GoogleBookItem
+    {           
+        public VolumeInfo VolumeInfo { get; set; }
+    }
+        public class VolumeInfo
+        {   
+            public string Title { get; set; }
+            public List<string> Authors { get; set; }
+            public string Publisher { get; set; }
+            public string PublishedDate { get; set; }
+            public string Description { get; set; }
+            public string Thumbnail { get; set; }
+        }       
 
     public class BookApiHelper
     {
@@ -69,7 +63,7 @@ public class ImageLinks
                         Publisher = item.VolumeInfo.Publisher,
                         PublishedDate = item.VolumeInfo.PublishedDate,
                         Description = item.VolumeInfo.Description,
-                        Thumbnail = item.VolumeInfo.ImageLinks?.Thumbnail
+                        Thumbnail = item.VolumeInfo?.Thumbnail
                     });
                 } 
             }
