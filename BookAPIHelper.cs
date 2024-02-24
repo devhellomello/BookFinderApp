@@ -38,7 +38,6 @@ namespace BookFinder
            // if the title is empty an empty list is returned
             if (string.IsNullOrEmpty(title))
             {
-                Console.WriteLine("Naughty, naughty! No empty lines");
                 return books;
             }
 
@@ -49,8 +48,6 @@ namespace BookFinder
                
                 if (response == null || response.Items == null || response.Items.Count == 0)
                 {
-                    // Handle a case where no books are bound or the response is null
-                    Console.WriteLine("I'm sorry. Either we couldn't find your book or the response is simply empty.");
                     return books;
                 }
 
@@ -66,10 +63,6 @@ namespace BookFinder
                         Thumbnail = item.VolumeInfo?.Thumbnail
                     });
                 } 
-            }
-            catch (HttpRequestException httpEx)
-            {
-                Console.WriteLine($"HTTP Request failed: {httpEx.Message}");
             }
             catch (Exception ex)
             {

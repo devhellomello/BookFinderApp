@@ -38,7 +38,8 @@
                     x:Name="bookClearBtn"
                     Text="Clear"
                     Clicked="BookClearBtn_Clicked"
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center" 
+                    Margin="0,10,0,0"/>
         </StackLayout>
 
         <StackLayout x:Name="searchStack">

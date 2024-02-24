@@ -21,7 +21,7 @@ public partial class MainPage : ContentPage
 			var result = await _bookApiHelper.GetBookTitle(bookEntry.Text);
             if (result == null || result.Count <= 0)
                 {
-                    await DisplayAlert("Error", "No book(s) found.", "Ok");
+                    await DisplayAlert("Error", "Sorry, No book(s) found.", "Ok");
                 }
                 else
                 {
@@ -31,7 +31,7 @@ public partial class MainPage : ContentPage
             }
 		catch (Exception)
 		{
-			await DisplayAlert("Error", "No book(s) found.", "Ok");
+			await DisplayAlert("Error", "Sorry, No book(s) found.", "Ok");
 		}
 		finally
 		{	
