@@ -24,16 +24,18 @@ Kidding! But seriously I'm not well versed enoough to give you a detailed overvi
 ### PICTURES
 
 Simple UI
+
 <img width="860" alt="Screenshot 2024-02-24 at 3 32 28 PM" src="https://github.com/devhellomello/BookFinderApp/assets/150868359/da12608f-e26d-40dc-990e-3bfd10127f5c">
 
 Search
+
 <img width="856" alt="Screenshot 2024-02-24 at 3 32 51 PM" src="https://github.com/devhellomello/BookFinderApp/assets/150868359/ac8f740a-a833-4de2-95aa-3059bde50a0c">
 
 Results
+
 <img width="859" alt="Screenshot 2024-02-24 at 3 33 09 PM" src="https://github.com/devhellomello/BookFinderApp/assets/150868359/347e934f-2ad5-4af6-8850-e3abe8dc36c8">
 
 Final Result 
-
 
 https://github.com/devhellomello/BookFinderApp/assets/150868359/60bb4b1f-748e-4daa-a2a6-f1151eada6c2
 
