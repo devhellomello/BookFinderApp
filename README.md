@@ -21,7 +21,7 @@ I'm thankful that I really only had to follow Jehan's lead as she created the Mo
 
 Kidding! But seriously I'm not well versed enoough to give you a detailed overview of the code architecture but I have written an article on Medium with as much explanation as I can provide. Please take a look if you have any questions. 
 
-The first article is (here)[https://medium.com/@devhellomello/object-oriented-programming-and-me-c-edition-8ff2ec033799].
+The first article is [here](https://medium.com/@devhellomello/object-oriented-programming-and-me-c-edition-8ff2ec033799]).
 
 ### PICTURES
 
