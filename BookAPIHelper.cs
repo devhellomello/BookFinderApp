@@ -27,7 +27,7 @@ namespace BookFinder
 
     public class BookApiHelper
     {
-        private const string ApiKey = "AIzaSyDImyo_B1VKeJJR8Y0lGT03suji5sQnFno";
+        private const string ApiKey = "ENTER YOUR API KEY HERE";
         private const string BaseUrl = "https://www.googleapis.com/books/v1/volumes";
         private static readonly HttpClient Client = new HttpClient();
 
