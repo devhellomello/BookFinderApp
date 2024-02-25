@@ -2,7 +2,7 @@
 This is a simple yet effective Book Finder application written in C# using the .NET Maui framework. 
 
 ### BACKGROUND
-This project is the result of a course I took from Jehan Mouldan to introduce beginners to Object-Oriented Programming, C#, and the .NET Maui framework. 
+This project is the result of a course I took from Jehan Moulden to introduce beginners to Object-Oriented Programming, C#, and the .NET Maui framework. 
 Jehan's course was well-paced and easy to move through. It ended with guiding the learner through created a Movie Finder App utilizing a movie database API. 
 As a book lover I chose to switch it up a bit and create a Book Finder application using the Google Books API. 
 I definitely struggled with some parts of developing this application but I did understand the system architecture and eventually the .NET Maui structure.
